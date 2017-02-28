@@ -66,6 +66,25 @@
 <!-- /.container -->
 </nav>
 
+<!-- Hover PopUp--> 
+<head>
+    <link rel="stylesheet" href="/assets/tooltipster.bundle.min.css" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/tooltipster.bundle.min.js"></script>
+    <script> 
+        $('.tooltip').tooltipster({
+          theme: 'tooltipster-sideTip-borderless'
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+    </script>
+</head>
+
   </body>
 </html>
 
