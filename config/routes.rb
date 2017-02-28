@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "welcome/homepage"
    root 'welcome#homepage'
 
+  get 'profiles' => 'profiles'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'signup' => 'users#new'
