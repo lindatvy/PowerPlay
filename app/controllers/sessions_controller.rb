@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
 		if @user && @user.authenticate(params[:session][:password])
 			session[:user_id] = @user.id
 			redirect_to '/profiles'
+			flash[:success] = 'Signed in successful!'
 		else
 			flash[:danger] = 'Invalid email/password combo'
 			render :new
