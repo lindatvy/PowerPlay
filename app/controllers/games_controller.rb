@@ -5,11 +5,17 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @games = Game.all
+    if params[:search] 
+      @games = Game.search(params[:search]).order("created_at DESC")
+    else
+      @games = Game.all.order("created_at DESC")
+    end
   end
 
   # GET /games/1
   # GET /games/1.json
   def show
+    
   end
 
   # GET /games/new

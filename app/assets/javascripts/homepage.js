@@ -8,10 +8,7 @@ $(document).ready( function () { //iframes and opacity fade
 		event.preventDefault();
 		$('#frame').attr('src', event.target.href);
 	});
-	$("#pagination a").click(function(event) {
-		event.preventDefault();
-		$('#frame').attr('src', event.target.href);
-	});
-
 });
+
+
 

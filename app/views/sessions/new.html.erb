@@ -7,7 +7,9 @@
 			<%= form_for(:session, url: login_path) do |f| %>
       	<%= f.email_field :email, :placeholder => "Email" %>
       	<%= f.password_field :password, :placeholder => "Password" %>
-      	<%= f.submit "Log In", class: "btn-submit" %>
+	<div class="btn-submit">      	
+	<%= f.submit "Log In" %>
+	</div>
       <% end %>
 		
     </div>
