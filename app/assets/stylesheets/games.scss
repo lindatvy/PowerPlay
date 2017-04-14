@@ -2,12 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table, td, th {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    border: 1px solid;
-    text-align: left;
-    padding: 8px;
+.aTable {
+    td, th {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid;
+        text-align: left;
+        padding: 8px;
+    }
 }
 
 tr:nth-child(even) {

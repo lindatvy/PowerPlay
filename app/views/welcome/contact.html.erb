@@ -1,0 +1,23 @@
+<br><br><br><br><br><%= @hello %>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="col-md-3">ID</th>
+        <th class="col-md-3">title</th>
+        <th class="col-md-6">description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <% @games.each do |game| %>
+            <tr>
+                <td><%= game.id %></td>
+                <td><%= game.title %></td>
+                <td><%= game.description %></td>
+            </tr>
+        <% end %>
+    </tbody>
+
+  </table>
