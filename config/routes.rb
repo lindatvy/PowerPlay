@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :miscs
   resources :videos
   resources :comments
   resources :games do

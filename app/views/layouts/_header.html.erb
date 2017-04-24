@@ -9,24 +9,35 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
+
+<!-- homepage -->
 <a class="navbar-brand" href="/">PowerPlay</a>
 </div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <ul class="nav navbar-nav">
+
+<!-- login -->
 <li>
-<a href="/login">Log In</a>
+<a href="/login">Login</a>
 </li>
+
+<!-- signup --> 
 <li>
 <a href="/signup">Sign Up</a>
 </li>
+
+<!-- about --> 
 <li>
 <a href="/about">About</a>
 </li>
+
+<!-- contact --> 
 <li>
 <a href="/contact">Contact</a>
 </li>
 </ul>
+
 <!-- search form -->
 <%= form_tag(games_path, :method => "get", id: "search-form", target: "gamepages", class: 'navbar-form navbar-right') do %>
 <div class="input-group">
