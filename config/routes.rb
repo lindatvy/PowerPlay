@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'about' => 'welcome#about'
   get 'contact' => 'welcome#contact'
+  get 'allgames' => 'games#allgames'
 end

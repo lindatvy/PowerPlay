@@ -63,8 +63,9 @@ ActiveRecord::Schema.define(version: 20170423020536) do
     t.string   "title"
     t.text     "description"
     t.string   "ESRB"
+    t.string   "link"
     t.datetime "created_at",         null: false
-    t.datetime "update_at",          null: false
+    t.datetime "updated_at",         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
