@@ -1,12 +1,11 @@
 
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>Title:</strong>
-  <%= @game.title %>
+  <h2> <%= @game.title %> </h2>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description:</strong><br>
   <%= @game.description %>
 </p>
 
@@ -15,7 +14,9 @@
   <%= @game.ESRB %>
 </p>
 
-<br><br> 
+<h2> Game Trailer </h2>
+<br>
+ 
 <iframe class="frame" width="500" height="250" src="<%= @game.link %>"></iframe>
 <br>
 
