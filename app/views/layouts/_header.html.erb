@@ -1,4 +1,4 @@
-<!-- Navigation -->
+<!-- Navigation -->    
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 <div class="container-fluid">
 
@@ -20,22 +20,35 @@
 
 <!-- all games --> 
 <li>
-<a href ="/gamelist">Game List</a>
+    <%= link_to "Game List", '/gamelist' %>
+</li>
+
+<!-- profile -->
+<li>
+<% if current_user %>
+    <%= link_to "Profile", '/profiles' %>
+</li>
+
+<!-- logout -->
+<li>
+    <%= link_to "Log Out", logout_path, method: :delete %>
 </li>
 
 <!-- login -->
 <li>
-<a href="/login">Login</a>
+<% else %>
+    <%= link_to "Login", '/login' %>
 </li>
 
 <!-- signup --> 
 <li>
-<a href="/signup">Sign Up</a>
+    <%= link_to "Signup", '/signup' %>
 </li>
-
+<% end %>
+    
 <!-- about --> 
 <li>
-<a href="/about">About</a>
+    <%= link_to "About", '/about' %>
 </li>
 </ul>
 

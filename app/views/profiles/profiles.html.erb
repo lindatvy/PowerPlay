@@ -1,6 +1,17 @@
-<div class="profiles">
-
-      <h1>Profile</h1>
-      <p>"Welcome back, #{user.email}"</p>
-		
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <% @user = current_user %>
+    </head>
+    <body>
+        <div class="card">
+            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" style="width:100%">
+            <div class="card-container">
+                <h3><b><%= @user.first_name + ' ' + @user.last_name %></b></h3> 
+                <h4><%= @user.email %></h4> 
+                <p>Comments: N/A</p>
+                <p>Reviews:  N/A</p>
+            </div>
+        </div>
+    </body>
+</html>
