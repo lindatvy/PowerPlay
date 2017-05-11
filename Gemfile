@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 gem 'seed_dump'
+gem 'acts_as_votable'
+# for voting
 gem 'commontator'
 # for comments
 gem "paperclip", "~> 4.3"
