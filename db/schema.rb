@@ -12,15 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20170511081506) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "comments", force: :cascade do |t|
     t.string   "text"
     t.integer  "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["game_id"], name: "index_comments_on_game_id", using: :btree
+    t.index ["game_id"], name: "index_comments_on_game_id"
   end
 
   create_table "commontator_comments", force: :cascade do |t|
@@ -35,10 +32,10 @@ ActiveRecord::Schema.define(version: 20170511081506) do
     t.integer  "cached_votes_down", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["cached_votes_down"], name: "index_commontator_comments_on_cached_votes_down", using: :btree
-    t.index ["cached_votes_up"], name: "index_commontator_comments_on_cached_votes_up", using: :btree
-    t.index ["creator_id", "creator_type", "thread_id"], name: "index_commontator_comments_on_c_id_and_c_type_and_t_id", using: :btree
-    t.index ["thread_id", "created_at"], name: "index_commontator_comments_on_thread_id_and_created_at", using: :btree
+    t.index ["cached_votes_down"], name: "index_commontator_comments_on_cached_votes_down"
+    t.index ["cached_votes_up"], name: "index_commontator_comments_on_cached_votes_up"
+    t.index ["creator_id", "creator_type", "thread_id"], name: "index_commontator_comments_on_c_id_and_c_type_and_t_id"
+    t.index ["thread_id", "created_at"], name: "index_commontator_comments_on_thread_id_and_created_at"
   end
 
   create_table "commontator_subscriptions", force: :cascade do |t|
@@ -47,8 +44,8 @@ ActiveRecord::Schema.define(version: 20170511081506) do
     t.integer  "thread_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["subscriber_id", "subscriber_type", "thread_id"], name: "index_commontator_subscriptions_on_s_id_and_s_type_and_t_id", unique: true, using: :btree
-    t.index ["thread_id"], name: "index_commontator_subscriptions_on_thread_id", using: :btree
+    t.index ["subscriber_id", "subscriber_type", "thread_id"], name: "index_commontator_subscriptions_on_s_id_and_s_type_and_t_id", unique: true
+    t.index ["thread_id"], name: "index_commontator_subscriptions_on_thread_id"
   end
 
   create_table "commontator_threads", force: :cascade do |t|
@@ -59,7 +56,7 @@ ActiveRecord::Schema.define(version: 20170511081506) do
     t.integer  "closer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true, using: :btree
+    t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
   end
 
   create_table "games", force: :cascade do |t|
@@ -98,7 +95,7 @@ ActiveRecord::Schema.define(version: 20170511081506) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_videos_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
   create_table "votes", force: :cascade do |t|
@@ -111,10 +108,8 @@ ActiveRecord::Schema.define(version: 20170511081506) do
     t.integer  "vote_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
-    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
-  add_foreign_key "comments", "games"
-  add_foreign_key "videos", "users"
 end

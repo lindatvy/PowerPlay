@@ -1,15 +1,11 @@
 
 <p id="notice"><%= notice %></p>
 <p>
-
   <h2> <%= @game.title %> </h2>
-
 </p>
-<br>
+
 <p>
-
   <strong>Description:</strong><br>
-
   <%= @game.description %>
 </p>
 
@@ -19,11 +15,9 @@
 </p>
 
 <h2> Game Trailer </h2>
-
 <br>
  
 <iframe class="frame" width="500" height="250" src="<%= @game.link %>"></iframe>
 <br>
 
 <%= commontator_thread(@game) %>
-
