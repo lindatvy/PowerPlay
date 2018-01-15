@@ -8,9 +8,11 @@
 
     <tbody>
         <% @games.each do |game| %>
+     
             <tr>
                 <td><%= game.title %></td>
                 <td><%= game.description %></td>
+            
             </tr>
         <% end %>
     </tbody>

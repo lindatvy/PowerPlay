@@ -10,3 +10,8 @@ Andy Park
 Sandy Trinh
 
 Danny Nuch
+
+<h2> To run locally: </h2> 
+
+1. Change into folder directory 
+2. run command:   rails server
